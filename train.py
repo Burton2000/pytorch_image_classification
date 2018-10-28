@@ -36,7 +36,7 @@ def train_model(model, dataloader, loss_function, optimizer, epochs):
 
 def main():
     # Load the train data.
-    train_csv = './mnist_pytorch/train.csv'
+    train_csv = './mnist_data/train.csv'
     train_x, train_y, val_x, val_y = load_train_csv_dataset(train_csv, validation_percent=0.1)
 
     # Create pytorch dataloaders for train and validation sets.

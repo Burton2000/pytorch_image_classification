@@ -21,7 +21,7 @@ def eval_model(model, dataloader):
 
 
 def kaggle_test_evaluation(trained_model_path='./trained_model.pt'):
-    test_x = load_test_csv_dataset('./mnist_pytorch/test.csv')
+    test_x = load_test_csv_dataset('./mnist_data/test.csv')
     test_x = torch.from_numpy(test_x)
 
     # Init model, restore its weights and set to eval mode.
