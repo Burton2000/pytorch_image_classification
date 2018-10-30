@@ -19,12 +19,14 @@ def train_model(model, dataloader, loss_function, optimizer, epochs):
     loss_history = []
     for epoch in range(epochs):
         for x_batch, y_batch in dataloader:
+            
+            # Zero the gradients.
+            optimizer.zero_grad()
+            
             # Compute output and loss.
             output = model(x_batch)
             loss = loss_function(output, y_batch)
 
-            # Zero the gradients and perform an SGD step.
-            optimizer.zero_grad()
             loss.backward()
             optimizer.step()
 
